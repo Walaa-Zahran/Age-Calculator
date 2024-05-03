@@ -17,11 +17,7 @@ function getAge(birthdayValue) {
   const currentDate = new Date();
   const birthDate = new Date(birthdayValue);
   let age = currentDate.getFullYear() - birthDate.getFullYear();
-  let month = currentDate.getMonth() - birthDate.getMonth();
-  if (
-    month < 0 ||
-    (month === 0 && currentDate.getDate() < birthDate.getDate())
-  ) {
+  if (age < 0 || (age === 0 && currentDate.getDate() < birthDate.getDate())) {
     alert("please enter a correct age");
   } else {
     return age;
